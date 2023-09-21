@@ -61,9 +61,6 @@ To run the container locally, use the following command:
 docker pull ghcr.io/jasserabdou/diabetesregression:latest
 docker run -p 5000:5000 ghcr.io/jasserabdou/diabetesregression:latest
 ```
-
-After executing the command, you can access the Flask application at [localhost:8000](http://localhost:8000).
-
 ## References
 
 - Bradley Efron, Trevor Hastie, Iain Johnstone, and Robert Tibshirani (2004) "Least Angle Regression," Annals of Statistics (with discussion), 407-499. [Read the paper](https://web.stanford.edu/~hastie/Papers/LARS/LeastAngle_2002.pdf).
