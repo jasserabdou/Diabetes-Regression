@@ -2,23 +2,23 @@
 
 ## Overview
 
-The Diabetes-Regression project is a data science pipeline designed to tackle a regression problem. It encompasses the following main stages:
+The Diabetes-Regression project is a comprehensive data science pipeline designed to address a regression problem. It encompasses the following key stages:
 
-1. **Loading the Data:** In this stage, the dataset containing information on 442 diabetes patients, including age, sex, body mass index, average blood pressure, and six blood serum measurements, is loaded into the pipeline.
+1. **Loading the Data:** This initial stage involves importing a dataset containing information on 442 diabetes patients, including age, sex, body mass index, average blood pressure, and six blood serum measurements.
 
-2. **Exploratory Data Analysis (EDA):** This step involves exploring and analyzing the dataset to gain insights into its characteristics, relationships, and potential patterns.
+2. **Exploratory Data Analysis (EDA):** Here, the dataset is thoroughly explored and analyzed to gain valuable insights into its characteristics, relationships, and potential patterns.
 
-3. **Building Regression Models:** Various regression models are constructed and evaluated to predict a quantitative measure of disease progression one year after baseline.
+3. **Building Regression Models:** Various regression models are constructed and evaluated to predict a quantitative measure of disease progression one year after the baseline.
 
-4. **Model Evaluation and Hyperparameter Tuning:** The performance of different regression models is assessed, and hyperparameters are fine-tuned to optimize their predictive capabilities.
+4. **Model Evaluation and Hyperparameter Tuning:** The performance of different regression models is rigorously assessed, and hyperparameters are fine-tuned to optimize their predictive capabilities.
 
 5. **Saving the Model:** The finalized regression model is saved for later use.
 
-Additionally, a Flask web application has been developed and encapsulated within a Docker image for easy deployment.
+In addition, a Flask web application has been developed and encapsulated within a Docker image for seamless deployment.
 
 ## Dataset Information
 
-The dataset contains information on ten baseline variables for 442 diabetes patients. These variables include:
+The dataset provides information on ten baseline variables for 442 diabetes patients. These variables include:
 
 - `age`: Age in years
 - `sex`: Gender
@@ -39,13 +39,13 @@ The target variable is a quantitative measure of disease progression one year af
 - Number of Attributes: First 10 columns are numeric predictive values
 - Target: Column 11 is a quantitative measure of disease progression one year after baseline
 
-The data has been preprocessed, with each of the 10 feature variables mean-centered and scaled by the standard deviation times the square root of `n_samples` (i.e., the sum of squares of each column totals 1).
+The data has undergone preprocessing, with each of the 10 feature variables mean-centered and scaled by the standard deviation times the square root of `n_samples` (i.e., the sum of squares of each column totals 1).
 
-For more information about the dataset, refer to the [source URL](https://www4.stat.ncsu.edu/~boos/var.select/diabetes.html).
+For further details about the dataset, please refer to the [source URL](https://www4.stat.ncsu.edu/~boos/var.select/diabetes.html).
 
 ## Model Selection
 
-The regression model was constructed and evaluated on three different algorithms:
+The regression model was constructed and evaluated using three different algorithms:
 
 1. **Linear Regression**: `LinearRegression()`
 2. **Logistic Regression**: `LogisticRegression()`
@@ -58,13 +58,12 @@ After rigorous evaluation, the 'Random Forest Regressor' model emerged as the be
 To run the container locally, use the following command:
 
 ```bash
-docker run -p 8000:8000 your-docker-image
+docker pull ghcr.io/jasserabdou/diabetesregression:latest
+docker run -p 5000:5000 ghcr.io/jasserabdou/diabetesregression:latest
 ```
 
-After running the command, you can access the Flask application at [localhost:8000](http://localhost:8000).
+After executing the command, you can access the Flask application at [localhost:8000](http://localhost:8000).
 
 ## References
 
 - Bradley Efron, Trevor Hastie, Iain Johnstone, and Robert Tibshirani (2004) "Least Angle Regression," Annals of Statistics (with discussion), 407-499. [Read the paper](https://web.stanford.edu/~hastie/Papers/LARS/LeastAngle_2002.pdf).
-
----
