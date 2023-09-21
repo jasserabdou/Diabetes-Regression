@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Disease Progression Prediction</title>
+    <link href="../static/css/styles.css" rel="stylesheet" media="all" />
+  </head>
+  <body>
+    <h1>Disease Progression Prediction</h1>
+    <form action="/predict" method="post">
+      <label for="age">Age (age in years):</label><br />
+      <input
+        type="range"
+        id="age"
+        name="age"
+        min="0"
+        max="100"
+        value="40"
+        oninput="outputAge.value = age.value"
+      />
+      <output id="outputAge">40</output><br />
+      <label for="sex">Sex (Male=0,Female=1):</label><br />
+      <input
+        type="range"
+        id="sex"
+        name="sex"
+        min="0"
+        max="1"
+        value="0"
+        oninput="outputSex.value = sex.value"
+      />
+      <output id="outputSex">0</output><br />
+      <label for="bmi">BMI (body mass index):</label><br />
+      <input
+        type="range"
+        id="bmi"
+        name="bmi"
+        min="25.0"
+        max="30.0"
+        step="0.1"
+        value="25.5"
+        oninput="outputBMI.value = bmi.value"
+      />
+      <output id="outputBMI">25.5</output><br />
+      <label for="bp">BP (average blood pressure):</label><br />
+      <input
+        type="range"
+        id="bp"
+        name="bp"
+        min="120"
+        max="140"
+        value="120"
+        oninput="outputBP.value = bp.value"
+      />
+      <output id="outputBP">120</output><br />
+      <label for="s1">S1 (tc, total serum cholesterol):</label><br />
+      <input
+        type="range"
+        id="s1"
+        name="s1"
+        min="140"
+        max="160"
+        value="150"
+        oninput="outputS1.value = s1.value"
+      />
+      <output id="outputS1">150</output><br />
+      <label for="s2">S2 (ldl, low-density lipoproteins):</label><br />
+      <input
+        type="range"
+        id="s2"
+        name="s2"
+        min="35"
+        max="55"
+        value="40"
+        oninput="outputS2.value = s2.value"
+      />
+      <output id="outputS2">40</output><br />
+      <label for="s3">S3 (hdl, high-density lipoproteins):</label><br />
+      <input
+        type="range"
+        id="s3"
+        name="s3"
+        min="40"
+        max="60"
+        value="45"
+        oninput="outputS3.value = s3.value"
+      />
+      <output id="outputS3">45</output><br />
+      <label for="s4">S4 (tch, total cholesterol / HDL):</label><br />
+      <input
+        type="range"
+        id="s4"
+        name="s4"
+        min="1.5"
+        max="2.0"
+        step="0.1"
+        value="1.5"
+        oninput="outputS4.value = s4.value"
+      />
+      <output id="outputS4">1.5</output><br />
+      <label for="s5"
+        >S5 (ltg, possibly log of serum triglycerides level):</label
+      ><br />
+      <input
+        type="range"
+        id="s5"
+        name="s5"
+        min="0.8"
+        max="1.5"
+        step="0.1"
+        value="0.8"
+        oninput="outputS5.value = s5.value"
+      />
+      <output id="outputS5">0.8</output><br />
+      <label for="s6">S6 (glu, blood sugar level):</label><br />
+      <input
+        type="range"
+        id="s6"
+        name="s6"
+        min="120"
+        max="140"
+        value="120"
+        oninput="outputS6.value = s6.value"
+      />
+      <output id="outputS6">120</output><br />
+      <input type="submit" value="Predict" />
+    </form>
+    <script src="../static/js/script.js"></script>
+  </body>
+</html>

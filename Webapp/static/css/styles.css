@@ -1,0 +1,60 @@
+body {
+  background-image: url("../images/1st.jpg");
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  color: #007bff;
+}
+
+form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+  text-align: left;
+  color: #343a40;
+  font-weight: bold;
+}
+
+output {
+  display: inline-block;
+  margin: 10px 0;
+  text-align: left;
+  font-weight: bold;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+output {
+  font-weight: bold;
+}
+
+input[type="submit"] {
+  margin-top: 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}

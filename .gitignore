@@ -1,0 +1,10 @@
+# Python virtual environment
+pyvenv.cfg
+
+# Exclude folders
+share/
+Scripts/
+Lib/
+Include/
+etc/
+.ipynb_checkpoints/
